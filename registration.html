@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - RoboStars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="RoboStars Logo">
+        <h1>RoboStars</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О курсе</a></li>
+            <li><a href="courses.html">Курсы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="registration.html">Регистрация</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html">Войти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="registration">
+    <h2>Регистрация на курс</h2>
+    <form class="registration-form">
+        <label for="name">Имя:
+            <input type="text" id="name" name="name" required>
+        </label>
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+        <label for="course">Выберите курс:
+            <select id="course" name="course">
+                <option value="basic">Базовый</option>
+                <option value="advanced">Продвинутый</option>
+            </select>
+        </label>
+        <label for="message">О себе:
+            <textarea id="message" name="message" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn">Отправить</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 RoboStars. Все права защищены.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - RoboStars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            background: #001f3f;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background: #ffcc00;
+            color: #001f3f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="RoboStars Logo">
+        <h1>RoboStars</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О курсе</a></li>
+            <li><a href="courses.html">Курсы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="registration.html">Регистрация</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html">Войти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main style="text-align: center; padding: 20px;">
+    <h2>Галерея</h2>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/robot.jpg" alt="Слайд 1">
+            <img src="images/robots.jpg" alt="Слайд 2">
+            <img src="images/robots.jpg" alt="Слайд 2">
+            <img src="images/robots.jpg" alt="Слайд 2">
+            <img src="images/robots.jpg" alt="Слайд 2">
+            <img src="images/robots.jpg" alt="Слайд 2">
+            <img src="images/robots.jpg" alt="Слайд 2">
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="moveSlide(-1)">Назад</button>
+        <button onclick="moveSlide(1)">Вперед</button>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 RoboStars. Все права защищены.</p>
+</footer>
+
+<script>
+    let index = 0;
+    function moveSlide(step) {
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        index = (index + step + images.length) % images.length;
+        slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
+</script>
+
+</body>
+</html>
